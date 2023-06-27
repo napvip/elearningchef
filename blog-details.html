@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Blog-Deatails</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <style>
+        p{
+            color: #00000000 !important;
+        }
+        p:hover{
+            color: #00000000 !important;
+        }
+        .author{
+            color: #f47421;
+        }
+        .content-img{
+            background-color: #d8d7d7;
+        }
+        .mucluc{
+            border: 1px solid #f57b2c;
+            border-radius: 10px !important;
+        }
+        .main-list{
+            list-style-type: decimal;
+        }
+        .extra-list{
+            list-style-type: none;
+        }
+        .post-after{
+            border: 1px solid #d4c9c9;
+            border-radius: 10px !important;
+            height: 90px;
+        }
+        .title-right{
+            background-color: #f47421;
+            color: #fff;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+        }
+        .image-container {
+            position: relative;
+            }
+            
+            .image {
+            display: block;
+            width: 100%;
+            }
+            
+            .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            }
+            
+            .title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #e5dfc9 ;
+            font-size: 17px;
+            transition: all .5s;
+            }
+            .title:hover{
+                color: #f57b2c;
+                cursor: pointer;
+            }
+            
+            .description1 {
+            font-size: 16px;
+            color: #fff; 
+            }
+            .scrollable-column {
+                height: 1700px; /* Điều chỉnh chiều cao theo ý muốn */
+                overflow-y: auto;
+                }
+                
+                .fixed-column {
+                position: sticky;
+                left: 0;
+                z-index: 1;
+                }
+    </style>
+</head>
+
+<body>
+     <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="img/logo/5GBA.png" alt="">    
+        </a>
+        <button type="button" class="navbar-toggler me-4 btn-menu-5g" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <i class="fa-solid fa-bars menu-5g"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0 text-nav">
+                <a href="index.html" class="nav-item nav-link menu-item">Trang chủ</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle menu-item" data-bs-toggle="dropdown">Khóa học</a>
+                    <div class="dropdown-menu fade-down m-0 dropdow-bg">
+                        <a href="courses-details.html" class="dropdown-item menu-item text-warning" style="color: #ffb91e !important;">Dạy nấu ăn</a>
+                        <a href="dslist.html" class="dropdown-item menu-item text-warning" style="color: #ffb91e !important;">Lộ trình học</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link menu-item">Liên lạc</a>
+                <a href="blog.html" class="nav-item nav-link menu-item">Tin tức</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle menu-item" data-bs-toggle="dropdown">Tài khoản</a>
+                    <div class="dropdown-menu fade-down m-0 dropdow-bg">
+                        <a href="login.html" class="dropdown-item menu-item text-warning" style="color: #ffb91e !important;">Đăng ký</a>
+                        <a href="login.html" class="dropdown-item menu-item text-warning" style="color: #ffb91e !important;">Đăng nhập</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-item nav-link menu-item">Về chúng tôi</a>
+            </div>
+            <a href="" class="btn py-4 px-lg-5 d-none d-lg-block" style="color: #ffb91e !important">ĐĂNG KÝ NGAY!<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+      </nav>
+    <!-- Navbar End -->
+
+    <!-- tintuc-chitiet start -->
+    <div class="container-fluid main-news">
+      <div class="header-path">
+        <span class=""> Trang chủ / Tin tức /  Học Đầu Bếp Chuyên Nghiệp Thi Khối Nào? Kỹ Năng Cần Có</span>
+      </div>
+      <div class="row">
+        <div class="col-sm-8 ms-3 mb-5 scrollable-column">    
+          <h3 class="entry-title text-center">HỌC ĐẦU BẾP CHUYÊN NGHIỆP THI KHỐI NÀO? KỸ NĂNG CẦN CÓ</h3>
+          <div class="text-left">
+            <span>Bởi <i class="fa-solid fa-circle-user"></i><span class="author"> Richard Phan Chef</span></span>
+            <hr>
+            <span class="main-text">
+               <strong>Học đầu bếp chuyên nghiệp thi khối nào?</strong>Điều kiện để trở thành đầu bếp chuyên nghiệp ra sao? 
+                Có lẽ là câu hỏi chung của rất nhiều bạn trẻ, các bậc phụ huynh trước mỗi mùa tuyển sinh và 
+                 không ít người yêu thích nấu ăn. Để giải đáp thắc mắc này, hãy cùng <span class="author">Trường Đào Tạo Học Nấu Ăn Chuyên Nghiệp | HNAEdu</span> 
+                   tìm hiểu ngay câu trả lời nhé!
+            </span> <br>
+            <div class="content-img container my-3">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-12">
+                        <img src="img/news/other_news/gio-tre-hoc-dau-bep.jpg" class="w-100" alt="">
+                    </div>
+                    <div class="col-12 col-sm-12 ms-5">
+                        <span class="text-center">Học nghề bếp ngày càng được các bạn trẻ và nhiều phụ huynh quan tâm</span>
+                    </div>
+                </div>
+            </div>
+            <span>
+                Thông thường, tâm lý chung của nhiều em học sinh khi học hết THCS hoặc THPT và một số phụ huynh là phải thi một khối nào đó như: A, B, C, D… để có thể học tiếp tại những bậc học khác. Vậy nên, khi có ý định học nấu ăn nói chung và nghề đầu bếp nói riêng, nhiều người thắc mắc có phải thi hay không cũng là điều dễ hiểu. Nhất là trong một vài năm trở lại đây, khi cơ hội việc làm cho lao động nghề bếp và phát triển kinh doanh ẩm thực ngày càng rộng mở thì vấn đề học nấu ăn càng được nhiều phụ huynh, các bạn trẻ, những người đam mê ẩm thực quan tâm.
+            </span>
+          </div>
+          <div class="mucluc">
+            <span><i class="fa-solid fa-bars"></i> <span class="author">Mục Lục</span></span>
+            <ul class="main-list">
+                <li>Học đầu bếp chuyên nghiệp thi khối nào?
+                    <ul class="extra-list">
+                        <li>1.1 Đam mê và yêu thích công việc nấu nướng:</li>
+                        <li>1.2 Sức khỏe tốt và khả năng sáng tạo</li>
+                        <li>1.3 Cái "tâm" của người đầu bếp</li>
+                    </ul>
+                </li>
+                <li>Điều kiện và phẩm chất để trở thành đầu bếp</li>
+                <li>Những kĩ năng cần có của đầu bếp chuyên nghiệp
+                    <ul class="extra-list">
+                        <li>3.1 Kỹ năng chế biến món ăn</li>
+                        <li>3.2 Kỹ năng giao tiếp và làm việc nhóm</li>
+                        <li>3.3 Kỹ năng ngoại ngữ tin học</li>
+                        <li>3.4 Kỹ năng quản lý và tổ chức</li>
+                    </ul>
+                </li>
+            </ul>
+          </div>
+          <h3 class="author my-3">Học đầu bếp chuyên nghiệp thi khối nào?</h3>
+          <span>Theo quy định của Bộ luật Lao động 2012, điều 61, người đủ 14 
+            tuổi trở lên là có thể theo học nghề. Do đó, nếu đủ 14 tuổi, bạn
+             hoàn toàn có thể đăng ký học nghề bếp hoặc những nghề yêu thích
+              khác. Tuy nhiên, do đặc thù công việc như: làm việc với cường 
+              độ và áp lực cao, thường xuyên đứng nấu nướng trong không gian
+               bếp nóng, có mùi đồ ăn, gia vị… nên để theo đuổi con đường 
+               làm bếp chuyên nghiệp, bạn cần có một sức khỏe tốt, không mắc
+                các bệnh truyền nhiễm, các bệnh ngoài da… mới đảm bảo được 
+                các yêu cầu trong công việc.</span>
+          <h3 class="author my-3">Điều kiện và phẩm chất cần có để trở thành đầu bếp</h3>
+          <h5 class="author">Đam mê và yêu thích công việc nấu nướng:</h5>
+          <span>Đam mê trong nghề bếp chính là sự giao thoa giữa sở thích nấu nướng và khả năng
+             chế biến món ăn của bạn. Từ hai chất xúc tác này sẽ giúp bạn tiếp tục học hỏi, rèn
+              luyện để theo đuổi nghề. Đam mê cũng không phải tự nhiên mà có, nếu chưa xác định 
+              rõ được đam mê, hãy đi theo sự tò mò của bạn. Có được đam mê từ ban đầu, sẽ giúp bạn 
+              có ý chí, nghị lực để vượt qua mọi khó khăn, thử thách và kiên trì cố gắng trên từng
+               chặng đường của nghề bếp.</span>
+          <h5 class="author">Sức khỏe tốt và khả năng sáng tạo</h5>
+          <div class="content-img container my-3">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-12">
+                    <img src="img/news/other_news/uoc-mo-tro-thanh-dau-bep.jpg" class="w-100" alt="">
+                </div>
+                <div class="col-12 col-sm-12 ms-5">
+                    <span class="text-center">Đầu bếp cần có sức khỏe và khả năng sáng tạo</span>
+                </div>
+            </div>
+          </div>
+          <span>Với những đặc thù của công việc như thường xuyên đứng và di chuyển trong không gian 
+            bếp nóng pha lẫn mùi đồ ăn, gia vị… nên đòi hỏi người đầu bếp cần phải có sức khỏe tốt 
+            mới có thể gắn bó lâu dài với công việc. Bên cạnh đó, khả năng sáng tạo là tố chất quan
+             trọng không kém giúp người đầu bếp linh động trong việc chế biến các món ăn, lên thực đơn,
+              tạo ra những món ăn mới…</span>
+          <h5 class="author">Cái “tâm” của người đầu bếp</h5>
+          <span>Khi thực hiện món ăn cho thực khách, nếu bạn đặt vào đó những tâm huyết, tình cảm, sự quan
+             tâm và cố gắng chu toàn của mình, chắc chắn món ăn sẽ ngon hơn rất nhiều. Lúc đó, niềm hạnh phúc,
+              niềm vui thật sự của người đầu bếp chính là những lời khen ngợi, sự hài lòng của thực khách khi
+               thưởng thức món ăn. Chính cái “tâm” và đạo đức làm nghề sẽ giúp đầu bếp “sống” được với nghề.</span>
+          <h3 class="author my-3">Những kỹ năng cần có của đầu bếp chuyên nghiệp</h3>
+          <h5 class="author">Kỹ năng chế biến món ăn</h5>
+          <span>Đầu bếp chuyên nghiệp chắc chắn sẽ phải thành thạo, nắm vững các kỹ năng chế biến món ăn, biết cách
+             ghi nhớ và vận dụng kiến thức có được để luôn nắm vững các phương pháp chế biến; cách sơ chế, bảo quản 
+             nguyên liệu; cách kết hợp, sử dụng gia vị phù hợp…</span>
+          <h5 class="author">Kỹ năng giao tiếp và làm việc nhóm</h5>  
+          <div class="content-img container my-3">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-12">
+                    <img src="img/news/other_news/ky-nang-lam-viec-nhom-tot.jpg" class="w-100" alt="">
+                </div>
+                <div class="col-12 col-sm-12 ms-5">
+                    <span class="text-center">Đầu bếp cần có kỹ năng làm việc nhóm tốt</span>
+                </div>
+            </div>
+          </div>
+          <span>Nếu muốn có cơ hội tiến tới các nấc thang cao hơn trong nghề như: Bếp phó, Bếp trưởng… đầu bếp cần
+             rèn luyện kỹ năng giao tiếp, kỹ năng làm việc nhóm mới có thể làm việc với cấp trên, đồng nghiệp và khách hàng.</span>
+          <h5 class="author">Kỹ năng ngoại ngữ tin học</h5>
+          <span>Ngoại ngữ và tin học được xem là những phương tiện có ý nghĩa đặc biệt quan trọng để mở cửa hội nhập với nhiều nền
+             văn hóa ẩm thực trên thế giới. Kỹ năng ngoại ngữ và tin học tốt sẽ giúp đầu bếp có thêm cơ hội tiếp cận các nguồn tài
+              liệu của thế giới, học hỏi kinh nghiệm hay từ các đầu bếp nước ngoài…</span> 
+          <h5 class="author">Kỹ năng quản lý và tổ chức</h5>
+          <span>Hai kỹ năng này sẽ giúp người đầu bếp có khả năng điều phối, sắp xếp công việc, tạo hứng thú làm việc cho bản thân và những người khác.</span>
+          <h5 class="text-center">Mời bạn đánh giá bài viết để chúng tôi phục vụ bạn tốt hơn!</h5>
+          <div class="text-center">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <span>Điểm: 4.19 (21 bình chọn)</span>
+          </div>
+          <div class="post-after">
+            <h5><i class="fa-solid fa-backward"></i> Bài viết trước</h5>
+            <span class="author"><i class="fa-solid fa-arrow-left"></i>"Nghề Đầu Bếp Có Tương Lai Không ? <br> Có Nên Học Nghề Bếp?"</span>
+          </div>
+        </div>
+        <div class="col-sm-3 fixed-column">
+          <div class="title-right">
+            DẠY NẤU ĂN CHUYÊN NGHIỆP
+          </div>
+          
+          <div class="image-container mt-5">
+            <img src="img/news/other_news/lop-hoc-nghiep-vu-bep-truong.webp" alt="Hình ảnh" class="image w-100">
+            <div class="overlay">
+              <h2 class="title">NGHIỆP VỤ BẾP TRƯỞNG</h2>
+              <span class="description1">Chinh Phục Đỉnh Cao Nghề Bếp. Giáo Trình Dạy Nấu Ăn Theo Tiêu Chuẩn Quốc Tế</span>
+            </div>
+          </div>
+          <div class="image-container mt-5">
+            <img src="img/news/other_news/bep-truong-bep-au.webp" alt="Hình ảnh" class="image w-100">
+            <div class="overlay">
+              <h2 class="title">BẾP TRƯỞNG BẾP ÂU</h2>
+              <span class="description1">Dạy Nấu Món Âu Cơ Bản, Cách Setup Bàn Tiệc Âu Sang Trọng Chuyên Nghiệp</span>
+            </div>
+          </div>
+          <div class="image-container mt-5">
+            <img src="img/news/other_news/mon-a-thong-dung.webp" alt="Hình ảnh" class="image w-100">
+            <div class="overlay">
+              <h2 class="title">BẾP TRƯỞNG BẾP Á</h2>
+              <span class="description1">Học Nấu Món Á Ngon Từ Những Đầu Bếp Giàu Kinh Nghiệm Trong Nhà Hàng, Resort</span>
+            </div>
+          </div>
+          <div class="image-container mt-5">
+            <img src="img/news/other_news/bep-truong-bep-viet.webp" alt="Hình ảnh" class="image w-100">
+            <div class="overlay">
+              <h2 class="title">BẾP TRƯỞNG BẾP VIỆT</h2>
+              <span class="description1">Học Nấu Món Việt Cơ Bản, Nâng Cao, Chuyên Sâu, Đi Làm Đầu Bếp Nhà Hàng</span>
+            </div>
+          </div>
+          <div class="image-container mt-5">
+            <img src="img/news/other_news/bep-truong-bep-nhat.jpg" alt="Hình ảnh" class="image w-100">
+            <div class="overlay">
+              <h2 class="title">BẾP TRƯỞNG BẾP NHẬT</h2>
+              <span class="description1">Học Nấu Món Nhật, Làm Đầu Bếp Nhật. Mở Nhà Hàng Kinh Doanh Thành Công</span>
+            </div>
+          </div>
+          <div class="image-container mt-5">
+            <img src="img/news/other_news/ha-cao-mon-ngon-nguoi-hoa.webp" alt="Hình ảnh" class="image w-100">
+            <div class="overlay">
+              <h2 class="title">BẾP TRƯỞNG BẾP HOA</h2>
+              <span class="description1">Học Nấu Ăn Món Hoa 20 Chuyên Đề Tiềm, Quay, Há Cảo, Bánh Bao... Mở Quán</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+           
+    </div>
+    <!-- tintuc-chitiet endl -->
+    
+
+
+    <!-- Footer Start -->
+  <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6 text-footer link-footer">
+                <h4 class="text-white mb-3">Liên kết nhanh</h4>
+                <a class="btn btn-link"  href="">Về chúng tôi</a>
+                <a class="btn btn-link"  href="">Liên lạc với chúng tôi</a>
+                <a class="btn btn-link"  href="">Điều khoản</a>
+                <a class="btn btn-link"  href="">Bảo mật</a>
+                <a class="btn btn-link"  href="">Câu hỏi & Hỗ trợ</a>
+            </div>
+            <div class="col-lg-3 col-md-6 text-footer link-footer">
+                <h4 class="text-white mb-3">liên lạc</h4>
+                <a class="mb-2 " ><i class="fa fa-map-marker-alt me-3"></i>426 Trần Đại Nghĩa,Quận Ngũ Hành Sơn,TP. Đà Nẵng</a> <br>
+                <a class="mb-2" ><i class="fa fa-phone-alt me-3"></i>0896866955</a> <br>
+                <a class="mb-2" ><i class="fa fa-envelope me-3"></i>5gbwd@gmail.com</a> <br>
+                <div class="d-flex pt-2 social-media">
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-white mb-3">Hoạt động</h4>
+                <div class="row g-2 pt-2">
+                    <div class="col-4">
+                        <img class="img-fluid bg-light p-1" src="img/cooked/hđ1.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid bg-light p-1" src="img/cooked/hđ2.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid bg-light p-1" src="img/cooked/hđ3.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid bg-light p-1" src="img/cooked/hđ4.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid bg-light p-1" src="img/cooked/hđ5.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid bg-light p-1" src="img/cooked/hđ6.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-footer link-footer">
+                <h4 class="text-white mb-3">Hỗ trợ</h4>
+                <p>Mời bạn để lại địa chỉ email của bạn để chúng tôi hỗ trợ bạn tận tình!</p>
+                <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Địa chỉ email của bạn">
+                    <button type="button" class="btn btn-warning py-2 position-absolute top-0 end-0 mt-2 me-2">Gửi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 text-footer link-footer">
+                    &copy; <a class="border-bottom" href="#">Nhom5G</a>.
+
+                    Thiết kế bởi <a class="border-bottom"  href="https://htmlcodex.com">Nhóm 5G</a><br><br>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-menu">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+<!-- Footer End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/render.js"></script>
+</body>
+
+</html>

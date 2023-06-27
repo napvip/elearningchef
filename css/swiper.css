@@ -1,0 +1,36 @@
+.swiper-slide{
+  height: 270px;
+  width: 95%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+.swiper-slide .text-des{
+  max-width: 500px;
+}
+.text-des{
+  margin-left: 50px;
+}
+.text-des>p,h1,a{
+  color: #ffffff !important;
+}
+.text-des>a:hover{
+  background-color: #fff;
+  color: #000000;
+}
+.text-des a{
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  font-weight: bold;
+}
+.slide-one{
+  background: linear-gradient(to right, rgb(248, 69, 120), rgb(255, 148, 2));
+}
+.slide-two{
+  background: linear-gradient(to right, #7513ff, #06b1ff);
+}
+.slide-three{
+  background: linear-gradient(to right, #6828fa, #feb9a4 );
+}

@@ -1,0 +1,100 @@
+body{
+  background-color: #eaeaf0;
+ 
+}
+a{
+  text-decoration: none;
+}
+.blog-section{
+}
+.main-news{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 1300px;
+  padding: 0px;
+  background-color: #ffff;
+}
+.main-news .header-path{
+  padding: 5px 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+.news-right{
+  background-color:#58585a;
+}
+.main-title{
+  font-size: 28px;
+  color: #f47421;
+  font-weight: bold;
+  padding: 5px 0px;
+}
+.section-news{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25),0px -5px 10px rgba(0, 0, 0, 0.25);
+}
+.title-news-left{
+  margin-bottom: 15px;
+}
+.title-news-left .first{
+  color: #f47421;
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+.title-news-left .first:hover{
+  color: #000000;
+  transition: all 0.5s;
+}
+.title-ho{
+  color: #ffb91e;
+}
+.title-ho:hover{
+  color: #000000;
+  transition: 0.5s ease-in-out;
+}
+.card-body>h6{
+  font-size: 16px;
+  transition: all 0.5s;
+}
+.card-body>h6:hover{
+  color: #f47421 !important;
+  cursor: pointer;
+}
+.image-container {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.2) !important; /* Tăng kích thước ảnh */
+}
+
+.title-other{
+  display: inline-block;
+  border-bottom: 3px solid #f47421;
+  font-size: 20px;
+  color: #f47421;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: normal; 
+  margin: 20px 0px;  
+}
+.col{
+  justify-content: space-between;
+  box-shadow: 5px 5px 3px rgba(99, 98, 98, 0.5);
+}
+.btn-view-more{
+  padding: 6px 15px;
+  color: #ffff;
+  background-color: #f47421;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+

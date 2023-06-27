@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khóa học đầu bếp gia đình</title>
+    <!-- icon -->
+    <link rel="stylesheet" href="lib/themify-icons/themify-icons.css">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet --> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+     <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Patrick+Hand&family=Roboto:ital,wght@1,500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            text-transform: capitalize;
+        }
+
+        body {
+            background: #f1f1f1;
+        }
+
+        .container-playlist {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 15px;
+            align-items: flex-start;
+            padding: 5px 5%;
+            height: 1050px;
+            margin-top: 5px;
+        }
+
+        .container-playlist .main-video {
+            background: #fff;
+            border-radius: 5px;
+            padding: 10px;
+            height: 980px;
+        }
+
+        .container-playlist .main-video img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+
+        .container-playlist .video-list {
+            background: #fff;
+            border-radius: 5px;
+            height: 1000px;
+            overflow-y: scroll;
+
+        }
+
+        .container-playlist .video-list::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        .container-playlist .video-list::-webkit-scrollbar-track {
+            background: #ccc;
+            border: 50px;
+        }
+
+        .container-playlist .video-list::-webkit-scrollbar-thumb {
+            background: #e58f2c;
+            border: 50px;
+            border-radius: 5px
+        }
+
+        .container-playlist .video-list .vid img {
+            width: 100px;
+            border-radius: 5px;
+        }
+
+        .container-playlist .video-list .vid {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #eea34c;
+            color: #fff;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            font-family: 'Patrick Hand', cursive !important;
+        }
+
+        .container-playlist .video-list .vid:hover {
+            background: #dd923c;
+            cursor: pointer;
+        }
+
+
+        .container-playlist .main-video #title-video-main {
+            color: #eea34c;
+            font-size: 36px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-top: 20px;
+            margin-left: 20px;
+            font-family: 'Roboto', sans-serif !important;
+            font-weight: 300;
+        }
+
+        .container-playlist .main-video .video .video-repon {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .container-playlist .main-video .video .video-repon::after {
+            padding-top: 56.25%;
+            display: block;
+            content: '';
+        }
+
+        .container-playlist .main-video .video .video-repon iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container-header-playlist {
+            display: flex;
+            align-items: center;
+            height: 70px;
+            background-color: #fff;
+        }
+
+        .container-header-playlist img {
+            height: 50px;
+        }
+
+        .title-header-playlist {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        .btn-header-playlist{
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-settext-playlist{
+            color: #eea34c;
+            margin-left: 5px;
+            font-size: 25px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+            font-weight: 600;
+            margin-top: 14px;
+        }
+
+        .btn-header-playlist i{
+            color: #e58f2c;
+            font-weight: 600;
+        }
+
+        .time-learn-playlist {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+        }
+
+        .time-learn-playlist .phantram-learn{
+            width: 53px;
+            height: 53px;
+            background-color: #e58f2c;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 53px;
+            color: #fff;
+            margin-right: 10px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .sobaihoc-learn{
+            color: #e58f2c;
+            font-size: 20px;
+            font-weight: 550;
+            margin-top: 14px;
+        }
+
+        @media (max-width:990px) {
+            .container-playlist {
+                grid-template-columns: 1.5fr 1fr;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width:768px) {
+            .container-playlist {
+                grid-template-columns: 1fr;
+            }
+
+            .container-playlist .main-video {
+                height: 500px;
+            }
+        }
+        @media (max-width:695px) {
+            .title-header-playlist{
+                display: none;
+            }
+            .time-learn-playlist{
+                display: none;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="img/logo/5GBA.png" alt="">    
+        </a>
+        <button type="button" class="navbar-toggler me-4 btn-menu-5g" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <i class="fa-solid fa-bars menu-5g"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0 text-nav">
+                <a href="index.html" class="nav-item nav-link menu-item">Trang chủ</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle menu-item" data-bs-toggle="dropdown">Khóa học</a>
+                    <div class="dropdown-menu fade-down m-0 dropdow-bg">
+                        <a href="courses-details.html" class="dropdown-item menu-item text-warning" style="color: #ffb91e !important;">Dạy nấu ăn</a>
+                        <a href="dslist.html" class="dropdown-item menu-item text-warning" style="color: #ffb91e !important;">Lộ trình học</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link menu-item">Liên lạc</a>
+                <a href="blog.html" class="nav-item nav-link menu-item">Tin tức</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle menu-item" data-bs-toggle="dropdown">Tài khoản</a>
+                    <div class="dropdown-menu fade-down m-0 dropdow-bg">
+                        <a href="login.html" class="dropdown-item menu-item text-warning" style="color: #ffb91e !important;">Đăng ký</a>
+                        <a href="login.html" class="dropdown-item menu-item text-warning" style="color: #ffb91e !important;">Đăng nhập</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-item nav-link menu-item">Về chúng tôi</a>
+            </div>
+            <a href="" class="btn py-4 px-lg-5 d-none d-lg-block" style="color: #ffb91e !important">ĐĂNG KÝ NGAY!<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+      </nav>
+    <!-- Navbar End -->
+    <header class="container-header-playlist">
+        <div class="btn-header-playlist">
+            <i class="ti-angle-left"></i>
+            <p class="header-settext-playlist">Trang Chủ</p>
+        </div>
+        <div class="title-header-playlist">
+            <a href="#" class="logo-header-playlist">
+                <img src="img/IMG/5GBA.png" alt="">
+            </a>
+            <div class="text-header-playlist">
+                <p class="header-settext-playlist">Khóa Học Cho Người Mới Bắt Đầu</p>
+            </div>
+        </div>
+        <div class="time-learn-playlist">
+            <div class="phantram-learn">40%</div>
+            <p class="sobaihoc-learn">06/15 Bài Học</p>
+        </div>
+
+    </header>
+    <div class="container-playlist">
+        <div class="main-video">
+            <div class="video">
+                <div class="video-repon">
+                    <div id="video-youtube"><iframe class="video-embed" width="100%" height="600px"
+                            src="https://www.youtube.com/embed/3n1z9wotWFg"
+                            title="Cá Diêu Hồng Chiên Sốt Cà Chua - Món Ăn Quốc Dân Dễ Làm mà ngon" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                </div>
+                <h3 id="title-video-main">01. Cá Diêu Hồng Chiên Sốt Cà Chua</h3>
+            </div>
+        </div>
+
+        <div class="video-list">
+            <div class="vid" onclick="changeVideo('3n1z9wotWFg'), changeTitle('01. Cá Diêu Hồng Chiên Sốt Cà Chua')">
+                <img src="img/IMG/mon01.jpg" alt="">
+                <h3 class="title">01. Cá Diêu Hồng Chiên Sốt Cà Chua</h3>
+            </div>
+            <div class="vid" onclick="changeVideo('7E4aBO2EzyU'), changeTitle('02. Cá Lóc Kho Tiêu')">
+                <img src="img/IMG/mon02.jpg" alt="">
+                <h3 class="title">02. Cá Lóc Kho Tiêu</h3>
+            </div>
+            <div class="vid" onclick="changeVideo('lKF-L1S6Cew'), changeTitle('03. Sườn Chiên Nước Mắm')">
+                <img src="img/IMG/mon03.jpg" alt="">
+                <h3 class="title">03. Sườn Chiên Nước Mắm</h3>
+            </div>
+            <div class="vid" onclick="changeVideo('IGMuqHiKEVU'), changeTitle('04. Trứng Chiên Nước Mắm')">
+                <img src="img/IMG/mon04.jpg" alt="">
+                <h3 class="title">04. Trứng Chiên Nước Mắm</h3>
+            </div>
+            <div class="vid" onclick="changeVideo('p2fLtAZUTv8'), changeTitle('05. Cà Tím Kho Tiêu')">
+                <img src="img/IMG/mon05.jpg" alt="">
+                <h3 class="title">05. Cà Tím Kho Tiêu</h3>
+            </div>
+            <div class="vid" onclick="changeVideo('IjL80FGkxAk'), changeTitle('06. Cơm Chiên Trứng')">
+                <img src="img/IMG/mon06.jpg" alt="">
+                <h3 class="title">06. Cơm Chiên Trứng</h3>
+            </div>
+            <div class="vid" onclick="changeVideo('DMakmonbsVg'), changeTitle('07. Heo Quay Da Giòn Tan')">
+                <img src="img/IMG/mon07.jpg" alt="">
+                <h3 class="title">07. Heo Quay Da Giòn Tan</h3>
+            </div>
+            <div class="vid" onclick="changeVideo('Vt72gZR9DkM'), changeTitle('08. Khâu Nhục Quảng Đông')">
+                <img src="img/IMG/mon08.jpg" alt="">
+                <h3 class="title">08. Khâu Nhục Quảng Đông</h3>
+            </div>
+            <div class="vid" onclick="changeVideo('22_wR2X5QeU'), changeTitle('09. Thịt Bò Bít Tết')">
+                <img src="img/IMG/mon09.jpg" alt="">
+                <h3 class="title">09. Thịt Bò Bít Tết</h3>
+            </div>
+            <div class="vid" onclick="changeVideo('wZjJvTdKY2o'), changeTitle('10. Gà Hàn Quốc Ngọt Cay')">
+                <img src="img/IMG/mon10.jpg" alt="">
+                <h3 class="title">10. Gà Hàn Quốc Ngọt Cay</h3>
+            </div>
+            <div class="vid" onclick="changeVideo('FhgQQw7XKRY'), changeTitle('11. Cơm Gà Xối Mỡ')">
+                <img src="img/IMG/mon11.jpg" alt="">
+                <h3 class="title">11. Cơm Gà Xối Mỡ</h3>
+            </div>
+            <div class="vid" onclick="changeVideo('eMA9GFn0trA'), changeTitle('12. Cơm Cháy Chiên Nước Mắm')">
+                <img src="img/IMG/mon12.jpg" alt="">
+                <h3 class="title">12. Cơm Cháy Chiên Nước Mắm</h3>
+            </div>
+            <div class="vid" onclick="changeVideo('CHkGbGzzHsk'), changeTitle('13. Làm bánh gạo tokbokki')">
+                <img src="img/IMG/mon13.jpg" alt="">
+                <h3 class="title">13. Làm bánh gạo tokbokki</h3>
+            </div>
+            <div class="vid" onclick="changeVideo('2en_I2wwyRU'), changeTitle('14. Bánh Sữa Tươi Chiên Giòn')">
+                <img src="img/IMG/mon14.jpg" alt="">
+                <h3 class="title">14. Bánh Sữa Tươi Chiên Giòn</h3>
+            </div>
+            <div class="vid" onclick="changeVideo('7BH3AOCe_EA'), changeTitle('15. Bánh Flan Siêu Ngon')">
+                <img src="img/IMG/mon15.jpg" alt="">
+                <h3 class="title">15. Bánh Flan Siêu Ngon</h3>
+            </div>
+        </div>
+    </div>
+    
+<!-- JavaScript Libraries -->
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/swiper.js"></script>
+    <script>
+        function changeVideo(videoId) {
+            var videoContainer = document.getElementById('video-youtube');
+            videoContainer.innerHTML = '<iframe class="video-embed" width="100%" height="600px" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+        }
+
+        function changeTitle(title) {
+            var titleVideo = document.getElementById('title-video-main');
+            titleVideo.innerHTML = title;
+        }
+
+    </script>
+</body>
+
+</html>

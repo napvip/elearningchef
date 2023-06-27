@@ -1,0 +1,39 @@
+.text-footer>a,p,h4{
+  color: #949da5 !important;
+}
+.text-footer>p{
+  color: #949da5 !important;
+}
+.text-footer>h4{
+  color: #949da5 !important;
+}
+a:hover{
+  color: #fff !important;
+  transition: .4s ease;
+}
+p:hover{
+  color: #fff !important;
+  transition: .4s ease;
+
+}
+.link-footer a:hover{
+  color: #ffb91e !important;
+  box-shadow: 0 0 1rem  #ffb91e !important;
+}
+.social-media a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border-radius: 50%;
+  font-size: 1rem;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: .5s ease;
+}
+.social-media a:hover{
+  color: #333 !important;
+  background: #ffb91e !important;
+  box-shadow: 0 0 1rem  #ffb91e !important;
+}
